@@ -1,0 +1,49 @@
+{
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "NODE_ENV=production gulp build",
+    "sprite": "gulp sprite",
+    "postinstall": "bower install"
+  },
+  "devDependencies": {
+    "bower": "latest",
+    "browserify": "latest",
+    "coffeescript": "latest",
+    "coffeeify": "latest",
+    "colors": "latest",
+    "connect": "latest",
+    "connect-livereload": "latest",
+    "del": "latest",
+    "glob": "latest",
+    "gulp": "latest",
+    "gulp-if": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jade": "latest",
+    "gulp-livereload": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylus": "latest",
+    "gulp-task-listing": "latest",
+    "gulp-uglify": "latest",
+    "gulp.spritesmith": "latest",
+    "imagemin-pngquant": "latest",
+    "is-directory": "latest",
+    "lodash": "latest",
+    "main-bower-files": "latest",
+    "mkdirp": "latest",
+    "modernizr": "latest",
+    "nib": "latest",
+    "require-dir": "latest",
+    "run-sequence": "latest",
+    "serve-static": "latest",
+    "stylus": "latest",
+    "three": "^0.73.0",
+    "through2": "latest",
+    "yargs": "latest"
+  },
+  "browser": {
+    "common": "./site-config/common.coffee"
+  }
+}

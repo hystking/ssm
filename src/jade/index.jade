@@ -1,0 +1,60 @@
+extend base
+
+block append meta
+  // Meta Infomation
+  title= meta.title
+  meta(name="description", content=meta.description)
+  meta(name="keywords", content=meta.keywords)
+
+  // Facebook OGP
+  meta(name="og:title", content=meta.title)
+  meta(name="og:description", content=meta.description)
+  meta(name="og:type", content="website")
+  meta(name="og:url", content=meta.urlIndex)
+  meta(name="og:image", content=meta.ogImage)
+  meta(name="og:site_name", content=meta.title)
+
+  // Twitter Card
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:title", content=meta.title)
+  meta(name="twitter:description", content=meta.description)
+  meta(name="twitter:image:src", content=meta.ogImage)
+
+block content
+  main(class=meta.slug)
+    .page
+      h1.page-title <small>SUPER</small><br>SUSHI MAKER
+      canvas.view-canvas#sushiViewerCanvas(width="512", height="512")
+    .page
+      h1.page-title <small>DRAW YOUR</small><br>NETA
+      canvas.view-canvas#netaPainterCanvas(width="512", height="512")
+    .page
+      h1.page-title <small>DRAW YOUR</small><br>SHARI
+      canvas.view-canvas#shariPainterCanvas(width="512", height="512")
+    .page
+      h1.page-title <small>DRAW YOUR</small><br>SARA
+      canvas.view-canvas#saraPainterCanvas(width="512", height="512")
+    .uis
+      .ui
+        .ui-title 線の色
+        input#spectrumColorPicker
+      .ui
+        .ui-title 線の太さ
+        select#lineWidthSelector
+          option(value="5") 5
+          option(value="10") 10
+          option(value="50") 50
+          option(value="2000") 塗りつぶし
+      .ui
+        .ui-title 　
+        button#nextButton 次へ
+
+block append stylesheet
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.1/spectrum.min.css")
+  link(href="css/index.css", rel="stylesheet")
+
+block append script-head
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.1/spectrum.min.js")
+
+block append script-body
+  script(src="js/index.js")

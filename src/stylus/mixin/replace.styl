@@ -1,0 +1,19 @@
+@require "hide-text"
+@require "bg"
+
+_replace-size(path, scale)
+  size = image-size(path)
+  width: (size[0] * scale)
+  height: (size[1] * scale)
+  
+replace(path, scale = 1)
+  bg(path, scale)
+  _replace-size(path, scale)
+  background-repeat: no-repeat
+  hide-text()
+  
+replace-data-url(path, scale = 1)
+  bg-data-url(path, scale)
+  _replace-size(path, scale)
+  background-repeat: no-repeat
+  hide-text()
